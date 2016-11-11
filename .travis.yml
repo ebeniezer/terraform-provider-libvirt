@@ -28,3 +28,11 @@ install:
 # code
 script:
   - go test ./libvirt
+  
+deploy:
+  provider: releases
+  api_key: "ca3f23a15ed17fb16f78db8f36e190c4058b5914"
+  file: "libvirtgo"
+  skip_cleanup: true
+  on:
+    tags: true
