@@ -31,7 +31,7 @@ script:
   
 deploy:
   provider: releases
-  api_key: "ca3f23a15ed17fb16f78db8f36e190c4058b5914"
+  api_key: "464ae24704716c4e610cbf049dbb6f7f8ba688ef"
   file: "libvirtgo"
   skip_cleanup: true
   on:
