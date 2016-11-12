@@ -23,6 +23,9 @@ before_install:
 install:
   - go build .
   - go install
+
+script:
+  - go test ./libvirt
   
 deploy:
   provider: releases
