@@ -22,9 +22,12 @@ before_install:
 
 install:
   - go build .
-
-# override the custom test script, this would trigger
-# also the execution of the unit tests of the vendored
-# code
-script:
-  - go test ./libvirt
+  - go install
+  
+deploy:
+  provider: releases
+  api_key: "464ae24704716c4e610cbf049dbb6f7f8ba688ef"
+  file: "libvirtgo"
+  skip_cleanup: true
+  on:
+    tags: true
